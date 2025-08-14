@@ -1,4 +1,6 @@
-/* Disable all animations, transitions, and blinking */
+/* ==============================
+   Disable all animations, transitions, and blinking
+   ============================== */
 *,
 *:before,
 *:after {
@@ -38,4 +40,23 @@ li {
     background: none !important;
     box-shadow: none !important;
     color: inherit !important;
+}
+
+/* ==============================
+   Fix mask-image for lazy-figure
+   ============================== */
+.fSuAUq .lazy-figure {
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari */
+    mask-image: radial-gradient(white, black); /* Standard */
+}
+
+/* ==============================
+   Fix appearance warnings for form elements
+   ============================== */
+input, select, button, [class*="appearance"] {
+    -webkit-appearance: none;
+    appearance: none;
 }
