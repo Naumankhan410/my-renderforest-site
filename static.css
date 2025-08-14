@@ -1,8 +1,4 @@
-/* ============================= */
-/* Fully Static Renderforest Site */
-/* ============================= */
-
-/* --- Disable all animations and transitions --- */
+/* Disable all animations and transitions (even JS-injected) */
 *,
 *:before,
 *:after {
@@ -10,89 +6,36 @@
     transition: none !important;
 }
 
-/* --- Fix lazy-loaded images and blinking --- */
+/* Fix blinking images, lazy loading, and dynamic elements */
 .img-loading,
 .img-loaded,
 .LazyLoad,
-.lazy-figure {
-    opacity: 1 !important;
-    animation: none !important;
-}
-
-/* --- Fix floating, fixed, or shaking elements --- */
+.lazy-figure,
 .gLFSCD,
 .bloDpo,
 .boKZAu,
-.jHCZrL,
-.fSuAUq,
-.eTPiXM {
-    animation: none !important;
-    transition: none !important;
+.jHCZrL {
     opacity: 1 !important;
     visibility: visible !important;
+    animation: none !important;
+    transition: none !important;
 }
 
-/* --- Force static background, color, and remove shadows --- */
+/* Force background, fonts, and colors to remain static */
 body,
 section,
-footer,
 div,
 span,
 p,
 ul,
-li,
-a,
-button,
-input,
-select,
-textarea {
+li {
     background: none !important;
     box-shadow: none !important;
     color: inherit !important;
 }
 
-/* --- Fix mask-image for Safari and standard browsers --- */
-.fSuAUq .lazy-figure,
-.eTPiXM .lazy-figure {
-    -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari */
-    mask-image: radial-gradient(white, black); /* Standard */
-}
-
-/* --- Fix appearance warnings for inputs, buttons, selects --- */
-input,
-select,
-button,
-textarea {
-    -webkit-appearance: none;
-    appearance: none;
-    outline: none !important;
-    border: none !important;
-    background: none !important;
-}
-
-/* --- Remove hover effects that flash/blink --- */
-a:hover,
-button:hover,
-input:hover,
-select:hover,
-textarea:hover {
-    box-shadow: none !important;
-    background: none !important;
-}
-
-/* --- Force all images, videos, and media to stay fully visible --- */
-img,
-video,
-figure {
-    opacity: 1 !important;
-    animation: none !important;
-    transition: none !important;
-}
-
-/* --- Optional: hide any remaining blinking indicators --- */
-.blink,
-.flash,
-.fade {
-    opacity: 1 !important;
-    animation: none !important;
+/* Optional: force floating/fixed elements to show */
+.gLFSCD,
+.bloDpo {
+    display: block !important;
 }
