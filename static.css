@@ -1,8 +1,8 @@
 /* ============================= */
-/* Fully Static Site CSS          */
+/* Fully Static Renderforest Site */
 /* ============================= */
 
-/* Disable all animations, transitions, and blinking */
+/* --- Disable all animations and transitions --- */
 *,
 *:before,
 *:after {
@@ -10,7 +10,7 @@
     transition: none !important;
 }
 
-/* Fix blinking images and lazy load */
+/* --- Fix lazy-loaded images and blinking --- */
 .img-loading,
 .img-loaded,
 .LazyLoad,
@@ -19,18 +19,20 @@
     animation: none !important;
 }
 
-/* Fix floating/shaking/fixed elements */
+/* --- Fix floating, fixed, or shaking elements --- */
 .gLFSCD,
 .bloDpo,
 .boKZAu,
-.jHCZrL {
+.jHCZrL,
+.fSuAUq,
+.eTPiXM {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-/* Force background and colors to remain static */
+/* --- Force static background, color, and remove shadows --- */
 body,
 section,
 footer,
@@ -38,34 +40,59 @@ div,
 span,
 p,
 ul,
-li {
+li,
+a,
+button,
+input,
+select,
+textarea {
     background: none !important;
     box-shadow: none !important;
     color: inherit !important;
 }
 
-/* Fix mask-image for standard browsers */
-.fSuAUq .lazy-figure {
-    position: absolute;
-    top: 0;
-    border-radius: 0;
+/* --- Fix mask-image for Safari and standard browsers --- */
+.fSuAUq .lazy-figure,
+.eTPiXM .lazy-figure {
     -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari */
-    mask-image: radial-gradient(white, black); /* Standard browsers */
+    mask-image: radial-gradient(white, black); /* Standard */
 }
 
-/* Fix appearance warnings for inputs, selects, buttons */
+/* --- Fix appearance warnings for inputs, buttons, selects --- */
 input,
 select,
 button,
 textarea {
     -webkit-appearance: none;
     appearance: none;
+    outline: none !important;
+    border: none !important;
+    background: none !important;
 }
 
-/* Optional: remove hover effects that cause flashes */
+/* --- Remove hover effects that flash/blink --- */
 a:hover,
 button:hover,
-input:hover {
+input:hover,
+select:hover,
+textarea:hover {
     box-shadow: none !important;
     background: none !important;
+}
+
+/* --- Force all images, videos, and media to stay fully visible --- */
+img,
+video,
+figure {
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* --- Optional: hide any remaining blinking indicators --- */
+.blink,
+.flash,
+.fade {
+    opacity: 1 !important;
+    animation: none !important;
 }
