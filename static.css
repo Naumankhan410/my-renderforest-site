@@ -1,0 +1,41 @@
+/* Disable all animations, transitions, and blinking */
+*,
+*:before,
+*:after {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Fix blinking images and lazy load */
+.img-loading,
+.img-loaded,
+.LazyLoad,
+.lazy-figure {
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+/* Fix all fixed/floating elements that shake */
+.gLFSCD,
+.bloDpo,
+.boKZAu,
+.jHCZrL {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Force background and colors to remain static */
+body,
+section,
+footer,
+div,
+span,
+p,
+ul,
+li {
+    background: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
