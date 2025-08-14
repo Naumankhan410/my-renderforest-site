@@ -1,4 +1,4 @@
-/* Disable all animations and transitions (even JS-injected) */
+/* Disable all animations and transitions */
 *,
 *:before,
 *:after {
@@ -6,7 +6,7 @@
     transition: none !important;
 }
 
-/* Fix blinking images, lazy loading, and dynamic elements */
+/* Fix blinking images and lazy load elements */
 .img-loading,
 .img-loaded,
 .LazyLoad,
@@ -21,7 +21,7 @@
     transition: none !important;
 }
 
-/* Force background, fonts, and colors to remain static */
+/* Force background, box shadows, and colors to remain static */
 body,
 section,
 div,
@@ -34,7 +34,7 @@ li {
     color: inherit !important;
 }
 
-/* Optional: force floating/fixed elements to show */
+/* Ensure floating/fixed elements display correctly */
 .gLFSCD,
 .bloDpo {
     display: block !important;
