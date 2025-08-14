@@ -1,6 +1,8 @@
-/* ==============================
-   Disable all animations, transitions, and blinking
-   ============================== */
+/* ============================= */
+/* Fully Static Site CSS          */
+/* ============================= */
+
+/* Disable all animations, transitions, and blinking */
 *,
 *:before,
 *:after {
@@ -17,7 +19,7 @@
     animation: none !important;
 }
 
-/* Fix all fixed/floating elements that shake */
+/* Fix floating/shaking/fixed elements */
 .gLFSCD,
 .bloDpo,
 .boKZAu,
@@ -42,21 +44,28 @@ li {
     color: inherit !important;
 }
 
-/* ==============================
-   Fix mask-image for lazy-figure
-   ============================== */
+/* Fix mask-image for standard browsers */
 .fSuAUq .lazy-figure {
     position: absolute;
     top: 0;
     border-radius: 0;
     -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari */
-    mask-image: radial-gradient(white, black); /* Standard */
+    mask-image: radial-gradient(white, black); /* Standard browsers */
 }
 
-/* ==============================
-   Fix appearance warnings for form elements
-   ============================== */
-input, select, button, [class*="appearance"] {
+/* Fix appearance warnings for inputs, selects, buttons */
+input,
+select,
+button,
+textarea {
     -webkit-appearance: none;
     appearance: none;
+}
+
+/* Optional: remove hover effects that cause flashes */
+a:hover,
+button:hover,
+input:hover {
+    box-shadow: none !important;
+    background: none !important;
 }
